@@ -14,9 +14,8 @@ Created in Game Maker 8. The reason for this is because Studio got rid of some u
 ### Bugs
 * Alpha masks aren't implemented yet.
 * Rename button isn't implemented yet.
-* File and Help buttons aren't implemented yet.
+* File and Help buttons aren't implemented yet.<br/><br/>
 
-<br/><br/>
 ### FAQ
 **Q:** Can you make this for "Operating System Here"?<br/>
 **A:** Game Maker 8 only allows for the creation of Windows 2000+ exe files. Studio probably supports "Operating System Here", so if you grab the .gmk source you can convert it yourself.<br/><br/>
