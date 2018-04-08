@@ -15,6 +15,7 @@ Created in Game Maker 8. The reason for this is because Studio got rid of some u
 * Alpha masks aren't implemented yet.
 * Rename button isn't implemented yet.
 * File and Help buttons aren't implemented yet.<br/><br/>
+* Hue, saturation and luminosity values are incorrect. Blame Game Maker.<br/><br/>
 
 ### FAQ
 **Q:** Can you make this for "Operating System Here"?<br/>
