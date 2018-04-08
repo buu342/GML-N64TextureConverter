@@ -12,7 +12,6 @@ Created in Game Maker 8. The reason for this is because Studio got rid of some u
 * 800×600 or greater screen resolution with 16-bit or 32-bit colors<br/><br/>
 
 ### Bugs
-* Alpha masks aren't implemented yet.
 * Rename button isn't implemented yet.
 * File and Help buttons aren't implemented yet.
 * Hue, saturation and luminosity values are incorrect. Blame Game Maker.<br/><br/>
