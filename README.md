@@ -13,8 +13,10 @@ Created in Game Maker 8. The reason for this is because Studio got rid of some u
 
 ### Bugs
 * Rename button isn't implemented yet.
+* Settings button isn't implemented yet.
 * File and Help buttons aren't implemented yet.
-* Hue, saturation and luminosity values are incorrect. Blame Game Maker.<br/><br/>
+* Hue, saturation and luminosity values are incorrect. Blame Game Maker.
+* When generating a palette with alpha mask enabled, two same colors but with different alpha values do not get differentiated<br/><br/>
 
 ### FAQ
 **Q:** Can you make this for "Operating System Here"?<br/>
