@@ -1,4 +1,11 @@
-*.png
-*.gb1
-*.pdn
-*.ico
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!.gitattributes
+!.git
+!README.md
+!LICENSE
+!N64 Texture Converter.gmx
+!Help File Source
