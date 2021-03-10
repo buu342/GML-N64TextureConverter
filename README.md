@@ -1,4 +1,4 @@
-![splash](.github/splash.png)
+![splash](.github/splash.png)<br/>
 **The code in this repo might be unstable! For stable versions, as well as compiled binaries, head to the [releases page](https://github.com/buu342/GML-N64TextureConverter/releases)**<br/>
 The N64 Texture Converter is a GUI based tool that allows you to import a myriad of image formats (.bmp, .gif, .jpg, .png, .ico) and export them as a Nintendo 64 compatible C or binary file. Supports all known image formats used by libultra.<br/>
 Created in GameMaker: Studio 1.4.<br/><br/>
