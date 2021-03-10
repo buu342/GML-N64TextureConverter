@@ -1,5 +1,19 @@
 # Ignore everything
-*
+/*.png
+/*.zip
+/*.gmez
+/*.bmp
+/*.exe
+/*.gmk
+/*.pdf
+/*.gex
+/*.txt
+/*.npl
+/*.c
+/*.h
+/*.bin
+/Graphics
+
 
 # But not these files...
 !.gitignore
@@ -7,5 +21,5 @@
 !.git
 !README.md
 !LICENSE
-!N64 Texture Converter.gmx
-!Help File Source
+!N64 Texture Converter.gmx/*
+!Help File Source/*
