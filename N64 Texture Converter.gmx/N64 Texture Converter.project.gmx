@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="5" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
       <name>ExecuteShell.dll</name>
       <exists>-1</exists>
@@ -24,7 +24,7 @@
     <datafile>
       <name>Help.chm</name>
       <exists>-1</exists>
-      <size>10182</size>
+      <size>21688</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>

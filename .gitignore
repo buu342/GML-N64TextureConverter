@@ -12,6 +12,8 @@
 /*.c
 /*.h
 /*.bin
+/*.chm
+/Help File Source/*.chm
 /Graphics
 
 

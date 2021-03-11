@@ -20,15 +20,17 @@ if ((global.exporttype == "8B-CI" || global.exporttype == "4B-CI") && (obj_sprit
 }
 
 // Check if there is a color mismatch with the base TLUT
-
-for (j=0; j<obj_sprite.sprite_height; j++)
+if ((global.exporttype == "8B-CI" || global.exporttype == "4B-CI") && global.basetlutnum != 0)
 {
-    for (i=0; i<obj_sprite.sprite_width; i++)
+    for (j=0; j<obj_sprite.sprite_height; j++)
     {
-        if (find_basetlut(i, j) == -1)
+        for (i=0; i<obj_sprite.sprite_width; i++)
         {
-            scr_create_popup("Base palette color mismatch.", "Error", 232, 126, snd_criticalerror, 2)
-            exit;
+            if (find_basetlut(i, j) == -1)
+            {
+                scr_create_popup("Base palette color mismatch.", "Error", 232, 126, snd_criticalerror, 2)
+                exit;
+            }
         }
     }
 }
