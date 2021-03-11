@@ -1,15 +1,32 @@
 [OPTIONS]
 Compatibility=1.1 or later
 Compiled file=Help.chm
-Contents file=C:\Users\Lourenço\Desktop\Game Development\Game Projects\N64 Texture Converter\Help File Source\Table of Contents.hhc
-Default topic=..\Help\Welcome.html
+Contents file=Table of Contents.hhc
+Default topic=Welcome.html
 Display compile progress=No
-Index file=C:\Users\Lourenço\Desktop\Game Development\Game Projects\N64 Texture Converter\Help File Source\Index.hhk
+Full-text search=Yes
+Index file=Index.hhk
 Language=0x816 Portuguese (Portugal)
 
 
 [FILES]
 Welcome.html
+101_introduction.html
+102_tmem.html
+201_overview.html
+202_starting.html
+203_usingalpha.html
+204_palettes.html
+103_1_rgba.html
+103_2_ci.html
+103_3_i.html
+103_4_ia.html
+103_5_yuv.html
+103_formats.html
+104_loading.html
+105_further.html
+001_howtmem.html
+002_howtool.html
 
 [INFOTYPES]
 
