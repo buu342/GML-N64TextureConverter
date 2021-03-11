@@ -6,6 +6,16 @@
 </HEAD><BODY>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Alpha Mask">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="203_usingalpha.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Base Palette">
+		<param name="Name" value="Palettes">
+		<param name="Local" value="204_palettes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="CI">
 		<param name="Name" value="Untitled: c:\vcprojects\html\103_2_ci.html">
 		<param name="Local" value="103_2_ci.html">
@@ -21,9 +31,64 @@
 		<param name="Local" value="103_4_ia.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intensity">
+		<param name="Name" value="Intensity Format">
+		<param name="Local" value="103_3_i.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intensity With Alpha">
+		<param name="Name" value="Intensity With Alpha Format">
+		<param name="Local" value="103_4_ia.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Palette">
+		<param name="Name" value="Palettes">
+		<param name="Local" value="204_palettes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RCP">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RDP">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reality Coprocessor">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reality Display Processor">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reality Signal Processor">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="RGBA">
 		<param name="Name" value="Untitled: c:\vcprojects\html\103_1_rgba.html">
 		<param name="Local" value="103_1_rgba.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RSP">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Texture Memory">
+		<param name="Name" value="TMEM">
+		<param name="Local" value="102_tmem.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TLUT">
+		<param name="Name" value="Color Index Format">
+		<param name="Local" value="103_2_ci.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="TMEM">

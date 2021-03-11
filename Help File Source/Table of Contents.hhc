@@ -37,15 +37,15 @@
 				<param name="Local" value="103_1_rgba.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="CI Format">
+				<param name="Name" value="Color Index Format">
 				<param name="Local" value="103_2_ci.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="I Format">
+				<param name="Name" value="Intensity Format">
 				<param name="Local" value="103_3_i.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="IA Format">
+				<param name="Name" value="Intesnity With Alpha Format">
 				<param name="Local" value="103_4_ia.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
