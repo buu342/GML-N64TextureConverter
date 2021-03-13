@@ -3,10 +3,11 @@ Compatibility=1.1 or later
 Compiled file=Help.chm
 Contents file=Table of Contents.hhc
 Default topic=Welcome.html
-Display compile progress=No
+Display compile progress=Yes
 Full-text search=Yes
 Index file=Index.hhk
 Language=0x816 Portuguese (Portugal)
+Title=N64 Texture Converter Help
 
 
 [FILES]
@@ -24,9 +25,10 @@ Welcome.html
 104_loading.html
 105_further.html
 201_overview.html
-202_starting.html
+202_compiling.html
 203_usingalpha.html
 204_palettes.html
+205_chunking.html
 
 [INFOTYPES]
 

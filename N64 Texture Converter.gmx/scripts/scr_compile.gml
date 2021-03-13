@@ -37,13 +37,14 @@ if ((global.exporttype == "8B-CI" || global.exporttype == "4B-CI") && global.bas
 
 // Ask for the directory to save the file to
 if (global.exportlocation == -1)
-    global.exportlocation = get_directory_alt_obsolete("Save Location", program_directory)
+    global.exportlocation = GMSF_open_directory("Save Location", program_directory)
 if (global.exportlocation == "")
 {
-    scr_create_popup("Unable to export image.", "Error", 232, 126, snd_criticalerror, 2)
     global.exportlocation = -1
     exit;
 }
+
+show_message(global.exportlocation)
 
 // Get the save types
 switch(global.exporttype)

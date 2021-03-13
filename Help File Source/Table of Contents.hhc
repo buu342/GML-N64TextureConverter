@@ -13,7 +13,7 @@
 		<param name="Local" value="Welcome.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="How the NINTENDO 64's TMEM Works">
+		<param name="Name" value="How the Nintendo 64's TMEM Works">
 		<param name="Local" value="001_howtmem.html">
 		<param name="ImageNumber" value="2">
 		</OBJECT>
@@ -73,8 +73,8 @@
 			<param name="Local" value="201_overview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="Getting Started">
-			<param name="Local" value="202_starting.html">
+			<param name="Name" value="Compiling Images">
+			<param name="Local" value="202_compiling.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Using Alpha">
@@ -83,6 +83,10 @@
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="Palettes">
 			<param name="Local" value="204_palettes.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Chunking">
+			<param name="Local" value="205_chunking.html">
 			</OBJECT>
 	</UL>
 </UL>

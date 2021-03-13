@@ -27,7 +27,7 @@ switch (argument2)
 // Write to the binary file   
 switch (argument2)
 {
-    case 1: FS_file_bin_write_byte(argument0, v) break;
-    case 2: FS_file_bin_write_word(argument0, v) break;
-    case 4: FS_file_bin_write_dword(argument0, v) break;
+    case 1: GMSF_file_bin_write_byte(argument0, v) break;
+    case 2: GMSF_file_bin_write_word(argument0, v) break;
+    case 4: GMSF_file_bin_write_dword(argument0, v) break;
 }

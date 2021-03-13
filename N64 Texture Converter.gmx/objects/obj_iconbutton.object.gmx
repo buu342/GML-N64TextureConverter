@@ -116,10 +116,11 @@ else
 {
     draw_set_alpha(min(1,(time-1000000)/100000))
     draw_set_font(fnt_topbutton)
+    draw_set_color(c_black)
+    draw_rectangle(lmouse_x-1, lmouse_y+21-1, lmouse_x+string_width(hint)+6+1, lmouse_y+21+17+1, false)
     draw_set_color(make_color_rgb(255, 255, 225))
     draw_rectangle(lmouse_x, lmouse_y+21, lmouse_x+string_width(hint)+6, lmouse_y+21+17, false)
     draw_set_color(c_black)
-    draw_rectangle(lmouse_x, lmouse_y+21, lmouse_x+string_width(hint)+6, lmouse_y+21+17, true)
     draw_text(lmouse_x+4, lmouse_y+23, hint)
     draw_set_color(c_white)
     draw_set_alpha(1)

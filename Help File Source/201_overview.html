@@ -10,18 +10,301 @@
 <h1>Program Overview</h1>
 
 <p>
-Paragraph1
+The <i>Nintendo64 Texture Converter</i> is a GUI based tool which allows you
+to import images in a myriad of formats, and export them as one of the many 
+different image formats supported by the default Nintendo 64 microcode. 
 </p>
 
 <p>
-Paragraph2
+When you start the <i>Nintendo64 Texture Converter</i>, the following form is
+shown:
 </p>
 
-<h3>Section name</h3>
+<center>
+<img src="images/progstart.png" width="403" height="316">
+</center>
 
 <p>
-Paragraph3
+On the top, you should have the familiar menu bar. On the left, you'll have a
+lot of options relating to your image and how it will be exported. On the 
+bottom, you'll have more options relating to how your texture is handled by the
+export. Note that many similar things can be achieved in different ways, such
+as: choosing a command from the menu, clicking a button, or by using a keyboard
+shortcut.
 </p>
+
+<h3>Icon Buttons</h3>
+
+<p>
+The menu bar on the top of the form features a bunch of different icons. Here
+is a quick overview of what each one does:
+</p>
+
+<ul>
+    <li>
+        <img src="images/tile000.png"> <b>New</b>: Restarts the program to its
+        initial state, where no image is loaded.
+    </li>
+    <li>
+        <img src="images/tile007.png"> <b>Import Image</b>: Loads an image for
+        conversion.
+    </li>
+    <li>
+        <img src="images/tile009.png"> <b>Import Alpha Mask</b>: Loads a black
+        and white alpha mask. More information in the 
+        <a href="203_usingalpha.html">Using Alpha</a> page.
+    </li>
+    <li>
+        <img src="images/tile018.png"> <b>Toggle Alpha View</b>: Switches 
+        between rendering your image or its alpha mask. More information in
+        the <a href="203_usingalpha.html">Using Alpha</a> page.
+    </li>
+    <li>
+        <img src="images/tile019.png"> <b>View Palette</b>: Opens the Palette
+        viewing form. More information in the 
+        <a href="204_palettes.html">Palettes</a> page.
+    </li>
+    <li>
+        <img src="images/tile015.png"> <b>Zoom In</b>: Zooms the image view in.
+    </li>
+    <li>
+        <img src="images/tile016.png"> <b>Zoom Reset</b>: Resets the image 
+        view.
+    </li>
+    <li>
+        <img src="images/tile017.png"> <b>Zoom Out</b>: Zooms the image view 
+        out.
+    </li>
+    <li>
+        <img src="images/tile008.png"> <b>Rename Output</b>: Allows you to 
+        change the name of the outputted file and array(s).
+    </li>
+    <li>
+        <img src="images/tile014.png"> <b>Generate Palette</b>: Generates a 
+        basic palette. More information in the 
+        <a href="204_palettes.html">Palettes</a> page.
+    </li>
+    <li>
+        <img src="images/tile005.png"> <b>Compile</b>: Exports your imported
+        image to the image and file format of your choosing.
+    </li>
+    <li>
+        <img src="images/tile004.png"> <b>Open Help</b>: Opens this document.
+    </li>
+</ul>
+
+<h3>Image Information</h3>
+
+<p>
+Upon importing an image into the program, information relevant to your image 
+is displayed on the top left:
+</p>
+
+<center>
+    <img src="images/imageinfo.png">
+</center>
+
+<p>
+The meaning of each row is as follows:
+</p>
+
+<ul>
+    <li>
+        <b>File</b>: This is the name that will be used for the file when 
+        you export your compiled image. It can be modified by pressing the
+        <img src="images/tile008.png"> <b>Rename Output</b> icon button.
+    </li>
+    <li>
+        <b>Array</b>: This is the name that will be used for the arrays (that
+        store your image information in code) when you export your 
+        compiled image. If you are using <b>Binary File</b> as your export 
+        mode, this is not displayed. It can be modified by pressing the
+        <img src="images/tile008.png"> <b>Rename Output</b> icon button. Array
+        names cannot start with numbers, and can only consist of alphanumeric 
+        characters or underscores.
+    </li>
+    <li>
+        <b>Size</b>: This is the size of your imported image0s width and height
+        (in pixels).
+    </li>
+    <li>
+        <b>TMEM</b>: This is the size of your imported image (in texels). If
+        your image (in the <b>Image Type</b> mode you have selected) surpasses
+        the 4096 byte limit of TMEM, it will be displayed in red. If you have 
+        selected the <b>Chunk image</b> checkbox, the size of each one of your 
+        chunked images (in texels) will be displayed in parenthesis.
+    </li>
+</ul>
+
+<h3>Image Type</h3>
+
+<p>
+Under the <b>Image Information</b> section, you have the <b>Image Type</b> 
+section:
+</p>
+
+<center>
+    <img src="images/imagetype.png">
+</center>
+
+<p>
+This lets you select the texture format which your image gets exported
+as, by selecting one of the radial buttons. An explanation of each image
+type can be found in the <a href="103_formats.html">Image Formats</a> 
+section of this manual. You can also change the background color of your
+image, provided it contains alpha, by clicking the colored square. 
+More information on how to use alpha is available in the 
+<a href="203_usingalpha.html">Using Alpha</a> page.
+</p>
+
+<h3>Export Format</h3>
+
+<p>
+Under the <b>Image Type</b> section, you have the <b>Export Format</b> 
+section:
+</p>
+
+<center>
+    <img src="images/exportmode.png">
+</center>
+
+<p>
+The meaning of each button is as follows:
+</p>
+
+<ul>
+    <li>
+        <b>Header</b>: A standard C header file with your image data in an
+        array format. This header does not contain include guards (as they
+        are useless due to the array being declared), therefore this format
+        should only be used if it is known that the image will be
+        <span class="inlinecode">#include</span>'ed once.
+    </li>
+    <li>
+        <b>C + Header</b>: A combination of a C and header file, with your
+        image data in an array format. The C file must be compiled on its own,
+        but because the header file uses 
+        <span class="inlinecode">extern</span> (as well as include guards) your
+        image can be <span class="inlinecode">#include</span>'ed in multiple 
+        files.
+    </li>
+    <li>
+        <b>Binary File</b>: A binary file with the raw texel data in it. This
+        is the best image format for large homebrew, but requires that your
+        data be linked into the ROM and DMA'd to RAM manually. 
+    </li>
+</ul>
+
+<p>
+When exporting an image with palettes's, the TLUT data is placed in the same 
+file as your texel data, albiet in a separate array which uses the same name
+as your main image, except ending with <span class="inlinecode">_tlut</span>.
+In <b>Binary File</b> mode, a second file is exported instead, following the
+same naming scheme. More information on palettes can be found in the 
+<a href="204_palettes.html">Palettes</a> page.
+</p>
+
+<p>
+If chunking mode is used, the texel array will be split into multiple arrays,
+albiet ending with <span class="inlinecode">_X_Y</span>, where 
+<span class="inlinecode">X</span> represents the N'th horizontal chunk and 
+<span class="inlinecode">Y</span> represents the N'th vertical chunk. In 
+<b>Binary File</b> mode, multiple files are created instead, following the
+same naming scheme. More information on chunking can be found in the
+<a href="205_chunking.html">Chunking</a> page.
+</p>
+
+<h3>Color Preview</h3>
+
+<p>
+Under the <b>Export Format</b> section, you have the <b>Color Previewer</b> 
+</p>
+
+<center>
+    <img src="images/pixelinfo.png">
+</center>
+
+<p>
+If you mouse over parts of your image, this section will display what that
+specific texel will be exported as. Each row represents the color and alpha
+value (be it in RGB, YUV, or I format) in 8 bit format, hexadecimal format,
+or a smaller format (if applicable). If the smaller format exists, the 
+hexadecimal value will represent that, and not the 8 bit color!
+</p>
+
+<p>
+Below the color matrix is a preview of the output texel with all the bits
+properly combines, in hexadecimal format, as well as a color preview box of
+the pixel that the mouse is currently over. 
+</p>
+
+<p>
+If a format that uses palettes is selected, the output texel may show up as
+<span class="inlinecode">????</span> if no palette (either an 
+automatically generated one or an imported one) is present. If a palette
+is present, then placing the mouse over a texel will display the palette value
+instead (with the color it represents in parenthesis). More information on 
+palettes can be found in the <a href="204_palettes.html">Palettes</a> page.
+</p>
+
+<h3>Bottom Bar</h3>
+
+<p>
+The bottom bar contains a few checkboxes and selections that allow you to 
+change certain things regarding how your image is exported. This section looks
+like this:
+</p>
+
+<center>
+    <img src="images/bottom.png">
+</center>
+
+<p>
+The meaning of each button is as follows:
+</p>
+
+<ul>
+    <li>
+        <b>Use Alpha</b>: Enables/disables the use of alpha. If enabled, you 
+        can choose between using the alpha mask, or using a single color. If 
+        single color mode is selected, you can change the color that will be 
+        used for alpha by placing your mouse over the image in the preview
+        and left clicking on the pixel with the color you wish to set 
+        transparent. More information on alpha can be found in the
+        <a href="203_usingalpha.html">Using Alpha</a> page.
+    </li>
+    <li>
+        <b>Add dummy aligners</b>: If a non-binary <b>Export Format</b> is 
+        selected, dummy aligners will be added to the exported array's
+        definitions. The dummy aligners are used to properly align the textures
+        in memory, and might lead to problems if not present. Uncheck if you
+        know what you are doing.
+    </li>
+    <li>
+        <b>Force power of two</b>: This forces your image size to be exported
+        as a power of two (for instance, 32x32, 128x64, etc...). This is 
+        recommended your image is not already a power of two <b>and</b> 
+        masking is going to be used (to allow for effects such as mirroring 
+        and LODs). Texels outside of your image's size will use the value of
+        0. More information on masking can be found in the 
+        <a href="104_loading.html">Loading Textures</a> page.
+    </li>
+    <li>
+        <b>Chunk image</b>: This splits your image into chunks with the size of 
+        your choosing. More information on chunking can be found in the
+        <a href="205_chunking.html">Chunking</a> page.
+    </li>
+    <li>
+        <b>Generate Palette</b>: If an image mode that supports palletes is 
+        used, this button will generate a palette based on the imported image.
+        More information on palettes can be found in the 
+        <a href="204_palettes.html">Palettes</a> page.
+    </li>
+    <li>
+        <b>Compile Image</b>: Exports the imported image in the 
+        <b>Export Format</b> you have selected.
+    </li>
+</ul>
 
 <!--END-->
 </body>

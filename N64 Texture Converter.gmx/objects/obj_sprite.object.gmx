@@ -147,16 +147,23 @@ if (!surface_exists(surfa))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!draw_alpha)
+            <string>var s = surf;
+var shader = -1;
+
+// Set the drawing mode
+if (draw_alpha)
 {
-    if (surface_exists(surf))
-        draw_surface(surf, view_wview[0], 0)
+    shader = shd_grayscale
+    s = surfa
 }
-else
-{
-    if (surface_exists(surfa))
-        draw_surface(surfa, view_wview[0], 0)
-}
+
+// Render the surface with the shader
+if (shader != -1)
+    shader_set(shader);
+if (surface_exists(s))
+    draw_surface(s, view_wview[0], 0)
+if (shader != -1)
+    shader_reset();
 </string>
           </argument>
         </arguments>

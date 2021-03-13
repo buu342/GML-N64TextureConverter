@@ -16,6 +16,7 @@
 /Help File Source/*.chm
 /Help File Source/*.log
 /Graphics
+/Plugin Source
 
 
 # But not these files...

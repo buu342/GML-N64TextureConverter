@@ -224,10 +224,10 @@ draw_roundrect(x+4, y+4, x+width+3, y+height+3, false)
 draw_set_alpha(1)
 
 // Box outline
-draw_set_color(c_white)
-draw_rectangle(x, y, x+width, y+height, false)
 draw_set_color(make_color_rgb(172, 168, 153))
-draw_rectangle(x, y, x+width, y+height, true)
+draw_rectangle(x, y, x+width, y+height, false)
+draw_set_color(c_white)
+draw_rectangle(x+1, y+1, x+width-1, y+height-1, false)
 draw_set_color(c_white)
 
 // Box elements
@@ -272,7 +272,7 @@ for (i=0; i&lt;itemcount; i+=1)
     else
     {
         draw_set_color(make_color_rgb(172, 168, 153))
-        draw_line(x+4, y+curh+4, x+width-4, y+curh+4)
+        draw_line_width(x+4, y+curh+4, x+width-4, y+curh+4, 1)
         curh = curh+9
     }
 }

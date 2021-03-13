@@ -265,15 +265,12 @@ if (changed != -1 &amp;&amp; keyboard_check_pressed(changed))
           <argument>
             <kind>1</kind>
             <string>var col = c_white
-var pop = 0
-if (popup)
-    pop = 1
 if (!enabled)
     col = make_color_rgb(245, 244, 241)
-draw_set_color(col)
-draw_rectangle(x, y, x+width, y+height, false)
 draw_set_color(make_color_rgb(127, 157, 185))
-draw_rectangle(x-pop, y-pop, x+width, y+height, true)
+draw_rectangle(x, y, x+width, y+height, false)
+draw_set_color(col)
+draw_rectangle(x+1, y+1, x+width-1, y+height-1, false)
 draw_set_color(c_white)
 
 if (surf != -1 &amp;&amp; surface_exists(surf))

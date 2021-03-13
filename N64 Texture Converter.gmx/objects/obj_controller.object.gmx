@@ -316,7 +316,7 @@ with obj
 {
     icon = 8
     execute = scr_showrename
-    hint = "Rename"
+    hint = "Rename output"
 }
 i+=inc
 
@@ -1211,9 +1211,12 @@ else
     draw_set_color(c_black)
 }
 i +=inc
-if instance_exists(obj_sprite)
-    draw_text(4,53+i,scr_stringcut("Array = "+global.arrayname, 124))
-i +=inc
+if (global.exportfile != "B")
+{
+    if instance_exists(obj_sprite)
+        draw_text(4,53+i,scr_stringcut("Array = "+global.arrayname, 124))
+    i +=inc
+}
 if instance_exists(obj_sprite)
     draw_text(4,53+i,"Size = "+string(finalw)+"x"+string(finalh))
 i +=inc
@@ -1221,44 +1224,55 @@ if instance_exists(obj_sprite)
 {
     var extra;
     var size;
+    var chunk;
     switch(global.exporttype)
     {
         case ("32B-RGBA"):
             extra = 0
             size = finalw*finalh*4
+            chunk = global.chunkval[0]*global.chunkval[1]*4
             break;
         case ("16B-RGBA"):
         case ("16B-IA"):
         case ("16B-YUV"):
             extra = 0
             size = finalw*finalh*2
+            chunk = global.chunkval[0]*global.chunkval[1]*2
             break;
         case ("8B-CI"):
             extra = 2048
             size = finalw*finalh
+            chunk = global.chunkval[0]*global.chunkval[1]
             break;
         case ("4B-CI"):
             extra = 2048
             size = ceil(finalw/2)*finalh
+            chunk = ceil(global.chunkval[0]/2)*global.chunkval[1]
             break;
         case ("8B-IA"):
         case ("8B-I"):
             extra = 0
             size = finalw*finalh
+            chunk = global.chunkval[0]*global.chunkval[1]
             break;
         case ("4B-IA"):
         case ("4B-I"):
             extra = 0
             size = ceil(finalw/2)*finalh
+            chunk = ceil(global.chunkval[0]/2)*global.chunkval[1]
             break;
         default:
             extra=0;
             size=0;
+            chunk=0;
             break;
     }
     if (size+extra &gt; 4096)
         draw_set_color(c_red)
-    draw_text(4,53+i,"TMEM = "+string(size+extra))
+    if (global.chunk)
+        draw_text(4, 53+i, scr_stringcut("TMEM = "+string(size+extra)+" ("+string(chunk)+")", 124))
+    else
+        draw_text(4, 53+i, scr_stringcut("TMEM = "+string(size+extra), 124))
     draw_set_color(c_black)
 }
 i +=inc
@@ -1268,16 +1282,16 @@ i +=(inc*2)-8
 draw_set_halign(fa_middle)
 draw_text(152/2,53+i,"Image Type")
 i +=inc*14
-draw_text(152/2,53+i, "Export As")
+draw_text(152/2,53+i, "Export Format")
 draw_set_halign(fa_left)
 
 draw_set_color(c_black)
 draw_set_font(fnt_button)
 draw_text(4,239+34+64,"Background Color = ")
+draw_set_color(c_black)
+draw_rectangle(122-1,274+64-1,138+1,290+64+1,false)
 draw_set_color(background_color)
 draw_rectangle(122,274+64,138,290+64,false)
-draw_set_color(c_black)
-draw_rectangle(122,274+64,138,290+64,true)
 draw_set_font(fnt_default)
 draw_set_color(c_white)
 

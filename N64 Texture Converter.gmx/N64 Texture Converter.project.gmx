@@ -3,24 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
-    <datafile>
-      <name>ExecuteShell.dll</name>
-      <exists>-1</exists>
-      <size>97792</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>ExecuteShell.dll</filename>
-    </datafile>
+  <datafiles number="10" name="datafiles">
     <datafile>
       <name>Help.chm</name>
       <exists>-1</exists>
@@ -38,10 +21,26 @@
       </ConfigOptions>
       <filename>Help.chm</filename>
     </datafile>
+    <datafile>
+      <name>GMSFiles.dll</name>
+      <exists>-1</exists>
+      <size>7680</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GMSFiles.dll</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
-    <extension index="0">extensions\libdlgmodule</extension>
-    <extension index="1">extensions\GMFileSystem</extension>
+    <extension index="0">extensions\GMSFiles</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_criticalerror</sound>
@@ -119,13 +118,14 @@
     </scripts>
     <scripts name="Functions">
       <script>scripts\ds_grid_add_multiple.gml</script>
-      <script>scripts\ExecuteShell.gml</script>
+      <script>scripts\file_bin_finish.gml</script>
       <script>scripts\file_bin_start.gml</script>
       <script>scripts\file_bin_write.gml</script>
-      <script>scripts\file_bin_finish.gml</script>
+      <script>scripts\file_text_finish.gml</script>
       <script>scripts\file_text_start.gml</script>
       <script>scripts\file_text_write.gml</script>
-      <script>scripts\file_text_finish.gml</script>
+      <script>scripts\scr_importalpha.gml</script>
+      <script>scripts\scr_importsprite.gml</script>
     </scripts>
     <scripts name="Icon Buttons">
       <script>scripts\scr_ask_importalpha.gml</script>
@@ -133,8 +133,6 @@
       <script>scripts\scr_ask_restart.gml</script>
       <script>scripts\scr_generate_tlut.gml</script>
       <script>scripts\scr_compile.gml</script>
-      <script>scripts\scr_importalpha.gml</script>
-      <script>scripts\scr_importsprite.gml</script>
       <script>scripts\scr_restart.gml</script>
       <script>scripts\scr_showhelp.gml</script>
       <script>scripts\scr_showpalette.gml</script>
@@ -180,8 +178,10 @@
     <script>scripts\scr_update_alpha.gml</script>
     <script>scripts\scr_update_sprite.gml</script>
     <script>scripts\scr_update_sprite_tlut.gml</script>
-    <script>scripts\null.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shd_grayscale.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_button</font>
     <font>fonts\fnt_default</font>

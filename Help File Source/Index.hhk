@@ -7,7 +7,7 @@
 <UL>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Alpha Mask">
-		<param name="Name" value="Introduction">
+		<param name="Name" value="Using Alpha">
 		<param name="Local" value="203_usingalpha.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
@@ -16,9 +16,64 @@
 		<param name="Local" value="204_palettes.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Binary">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bit">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Byte">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Cache">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Chunk">
+		<param name="Name" value="Chunking">
+		<param name="Local" value="205_chunking.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="CI">
 		<param name="Name" value="Untitled: c:\vcprojects\html\103_2_ci.html">
 		<param name="Local" value="103_2_ci.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clamp">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Color Index">
+		<param name="Name" value="Color Index Format">
+		<param name="Local" value="103_2_ci.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CPU">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Display List">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Hex">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Hexadecimal">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="I">
@@ -39,6 +94,31 @@
 		<param name="Name" value="Intensity With Alpha">
 		<param name="Name" value="Intensity With Alpha Format">
 		<param name="Local" value="103_4_ia.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LOD">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Mask">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Microcode">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Mirror">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Octal">
+		<param name="Name" value="Introduction">
+		<param name="Local" value="101_introduction.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Palette">
@@ -81,6 +161,21 @@
 		<param name="Local" value="101_introduction.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="S Coordinate">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="T Coordinate">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Texel">
+		<param name="Name" value="TMEM">
+		<param name="Local" value="102_tmem.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="Texture Memory">
 		<param name="Name" value="TMEM">
 		<param name="Local" value="102_tmem.html">
@@ -94,6 +189,11 @@
 		<param name="Name" value="TMEM">
 		<param name="Name" value="Untitled: c:\vcprojects\html\102_tmem.html">
 		<param name="Local" value="102_tmem.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Wrap">
+		<param name="Name" value="Loading Textures">
+		<param name="Local" value="104_loading.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="YUV">

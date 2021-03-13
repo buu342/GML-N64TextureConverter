@@ -1,1 +1,1 @@
-ExecuteShell(program_directory+"/Help.chm", false, true)
+GMSF_open_program(working_directory+"Help.chm")

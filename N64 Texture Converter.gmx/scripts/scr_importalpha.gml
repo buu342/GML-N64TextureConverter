@@ -33,13 +33,13 @@ for (i=0; i<size; i+=4)
     iy = floor((i/4)/w);
     
     // Get the color values
-    blue  = buffer_read(obj_sprite.buffa, buffer_u8)
-    green = buffer_read(obj_sprite.buffa, buffer_u8)
-    red   = buffer_read(obj_sprite.buffa, buffer_u8)
-    alpha = buffer_read(obj_sprite.buffa, buffer_u8) // Ignore, but must be read for data alignment
+    blue  = buffer_read(obj_sprite.buffa, buffer_u8)&$FF
+    green = buffer_read(obj_sprite.buffa, buffer_u8)&$FF
+    red   = buffer_read(obj_sprite.buffa, buffer_u8)&$FF
+    alpha = buffer_read(obj_sprite.buffa, buffer_u8) // Ignored, but must be read for data alignment
     
     // Assign the values to our arrays
-    alpha = (red+green+blue)/3
+    alpha = rgb_to_gray((red<<24)|(green<<16)|(blue<<8))
     obj_sprite.sprite_alpha[ix, iy] = alpha
     obj_sprite.import_alpha[ix, iy] = alpha
 }
