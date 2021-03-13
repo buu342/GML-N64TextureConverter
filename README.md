@@ -33,7 +33,7 @@ Created in GameMaker: Studio 1.4.<br/><br/>
 * Grab a copy of HTML Help Workshop, and start the program.
 * Load the `Help.hpp` project file located in `Help File Source`.
 * Hit the compile button.
-</details><br/><br/>
+</details>
 
 ### Bugs
 * None as far as I know<br/><br/>
