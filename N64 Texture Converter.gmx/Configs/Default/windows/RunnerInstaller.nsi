@@ -27,11 +27,11 @@
 !endif
 
 !ifndef COPYRIGHT_TXT
-!define COPYRIGHT_TXT     "(c)Copyright 2013"
+!define COPYRIGHT_TXT     "(c)Copyright 2021"
 !endif
 
 !ifndef FILE_DESC
-!define FILE_DESC         "Created with GameMaker:Studio"
+!define FILE_DESC         "N64 Texture Converter Installer"
 !endif
 
 !ifndef LICENSE_NAME
