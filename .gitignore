@@ -36,5 +36,6 @@ x86/
 !.git
 !README.md
 !LICENSE
+!GMSFiles Source/*
 !N64 Texture Converter.gmx/*
 !Help File Source/*
