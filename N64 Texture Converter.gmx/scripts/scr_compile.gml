@@ -40,11 +40,10 @@ if (global.exportlocation == -1)
     global.exportlocation = GMSF_open_directory("Save Location", program_directory)
 if (global.exportlocation == "")
 {
+    scr_create_popup("Unable to open file path", "Error", 232, 126, snd_criticalerror, 2)
     global.exportlocation = -1
     exit;
 }
-
-show_message(global.exportlocation)
 
 // Get the save types
 switch(global.exporttype)
@@ -184,6 +183,7 @@ if (global.exportfile != "B")
     if (global.exportfile == "CH")
     {
         script_execute(func_write, file, "\n");
+        script_execute(func_write, file, "\n");
         script_execute(func_write, file, "#include <ultra64.h>");
         script_execute(func_write, file, "\n");
         script_execute(func_write, file, "#include "+chr(34)+global.filename+".h"+chr(34));
@@ -251,7 +251,6 @@ if (writetlut)
     }
     else
     {
-        script_execute(func_write, file, "\n");
         script_execute(func_write, file, "\n");
         if (global.usedummy)
         {

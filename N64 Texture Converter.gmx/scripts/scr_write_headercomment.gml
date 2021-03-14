@@ -13,4 +13,3 @@ file_text_write(file, "\n");
 file_text_write(file, "// Size = "+string(wsize)+"x"+string(hsize)+append);
 file_text_write(file, "\n");
 file_text_write(file, "// Type = "+type);
-file_text_write(file, "\n");
