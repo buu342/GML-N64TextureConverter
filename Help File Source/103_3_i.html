@@ -10,17 +10,61 @@
 <h1>Intensity Format</h1>
 
 <p>
-Paragraph1
+Intensity format is a purely black and white color format. Instead of each
+texel containing color data, it instead contains color "intensity". Intensity, 
+by default, does not support alpha.
 </p>
 
 <p>
-Paragraph2
+On its own, having a black and white texture doesn't seem very useful, but 
+combined with vertex colors, it can provide a lot of color variation to a 3D
+scene, with the added bonus of supporting large textures. As an example, take 
+the following black and white 64x64 texture:
 </p>
 
-<h3>Section name</h3>
+<center>
+<img src="images/dirttex.png">
+</center>
 
 <p>
-Paragraph3
+Here's an example 3D scene of a dirt path near a rocky cliff. The entire scene
+uses only the above texture, combined with vertex colors:
+</p>
+
+<center>
+<img src="images/dirtpath.png" width="339" height="247"></br>
+<i>If you right click the photo, you should be able to access a full quality
+version.</i>
+</center>
+
+<p>
+As you can see, thanks to vertex colors, we can make the texture look more
+varied. Not only that, vertex colors gives us a lot of powerful tools, allowing
+you to fake shadows and Ambient Occulsion with little performance impact!
+</p>
+
+<p>
+Intensity format comes in two forms:
+</p>
+
+<h3>8-Bit Intensity</h3>
+
+<p>
+8-Bit Intensity is the easiest format to cover. Essentially, every texel is one
+byte of color intensity, ranging from <span class="inlinecode">0x00</span> 
+(black) to <span class="inlinecode">0xFF</span> (white), for a total of 256 
+shades. This gives you 4096 texels to work with, which is enough for a 64x64 
+texture.
+</p>
+
+<h3>4-Bit Intensity</h3>
+
+<p>
+Like with 4-Bit Color Index, each texel now actually represents two, as the 
+first 4 bits of the texture contain the odd column of texels, and the last 4
+contain the even texels column. This, of course, means that you are reduced to
+only 16 shades, but compensated with 8192 texels, allowing you to have textures
+as large as 90x90, 128x64, etc...
 </p>
 
 <!--END-->

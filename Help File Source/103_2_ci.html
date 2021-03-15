@@ -10,17 +10,68 @@
 <h1>Color Index Format</h1>
 
 <p>
-Paragraph1
+Color Index works differently from all the other color formats of the N64,
+because instead of each texel containing the color values, it contains a number
+which points to a list of colors. This list of colors is called the TLUT, which 
+stands for <i>Texture Lookup Table</i>. If you've ever done sprite work, you 
+might find the term <i>Palette</i> useful, as it's a very similar thing. 
 </p>
 
 <p>
-Paragraph2
+The TLUT used by CI mode stores colors in 16-Bit RGBA format, with the amount
+of colors dependent on the mode chosen. CI mode is a great tool if you're going
+to be performing color swaps, as it means you don't need to have multiple
+textures taking up precious ROM and RAM space. The biggest downside of CI mode,
+however, is the fact that regardless of which mode you choose, the TLUT will 
+always take up 2048 bytes of TMEM, despite the fact that it only requires
+512 bytes...
 </p>
 
-<h3>Section name</h3>
+<center>
+<img src="images/CI.png">
+<p>
+<i>An example 7x7 pixel art on the left.</br>
+The way it is stored is shown in the center, with its TLUT on the right.</i>
+</p>
+</center>
 
 <p>
-Paragraph3
+CI mode is available in two formats:
+</p>
+
+<h3>8-Bit Color Index</h3>
+
+<p>
+In 8-Bit mode, the TLUT can have up to 256 colors. Each texel only occupies 
+one byte, as its values only range from 
+<span class="inlinecode">0x00</span> to
+<span class="inlinecode">0xFF</span>. This gives you 2048 texels to work with,
+as each texel only occupies 8 bits.
+</p>
+
+<h3>4-Bit Color Index</h3>
+
+<p>
+In 4-Bit mode, the image can have up to 16 colors, but you can cram up to 16 
+different palettes into the TLUT (which helps reduce texture loading). The
+reason for the reduced color depth is because now, instead of each texel
+occupying 8 bits, they occupy 4, with the first 4 bits containing the odd
+numbered texels and the last 4 bits containing the even numbered texels.
+</p>
+
+<center>
+<img src="images/CI4.png">
+<p>
+<i>The same 7x7 pixel art, but in 4-Bit CI, with pink borders between 
+texels.</br>
+Notice that the the sprite is actually 8x7, because 4-BIT CI requires an 
+even number of texels.</i>
+</p>
+</center>
+
+<p>
+Thanks to its more compact form, 4-Bit CI allows up to 4096 texels to be used.
+This lets you to have textures as large as 64x64!
 </p>
 
 <!--END-->
