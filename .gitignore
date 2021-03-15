@@ -39,3 +39,5 @@ x86/
 !GMSFiles Source/*
 !N64 Texture Converter.gmx/*
 !Help File Source/*
+Help File Source/Help.chm
+Help File Source/Log1.log
