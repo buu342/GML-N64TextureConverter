@@ -51,13 +51,14 @@ access to the data from somewhere.
 The obvious solution would be to fetch the data from RAM, but this brings a 
 few problems. First of all, the CPU also has access to the data in RAM, so
 there is no guarantee that the textures will not be modified as the RDP is
-trying to render polygons. The other problem is the fact that, RAM can be 
-slow to access. Because of this, processors have a little memory chip embedded
-into them called a <i>cache</i>. Caches are usually very small in size (usually
+trying to render polygons. The other problem is the fact that RAM can be slow
+to access. Because of this, processors have a little memory chip embedded into
+them called a <i>cache</i>. Caches are usually very small in size (usually
 just a few kilobytes), but are incredibly fast to read and write. The RDP
 contains a single cache called TMEM, which will be covered in more depth in the
 <a href="102_tmem.html">TMEM</a> page.
 </p>
+
 
 <h3>Binary Notation</h3>
 
@@ -161,7 +162,8 @@ of two. For instance, the number <span class="inlinecode">342</span>, in base
 </center>
 
 <p>
-342 in base 2 is 101010110. You can break it down like this:
+342 in base 2 is <span class="inlinecode">101010110</span>. You can break it
+down like this:
 </p>
 
 <center>
@@ -175,6 +177,7 @@ important to understand what is going to be discussed in this help document,
 therefore if you wish to learn more about binary notation, you'll need to 
 research that on your own.
 </p>
+
 
 <h3>Hexadecimal Notation</h3>
 
@@ -223,6 +226,7 @@ able to store the number <span class="inlinecode">342</span> in memory.
 From here on out, there is going to be a lot of hexadecimal numbers, so it is
 important that you understand them well.
 </p>
+
 
 <h3>Display Lists</h3>
 

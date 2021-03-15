@@ -41,10 +41,21 @@ into chunks:
 <img src="images/texturechunk.png">
 </center>
 
-<h1>Texels</h1>
+<h3>Texels</h3>
 
 <p>
-TODO
+You will probably see this word being used a bit, so it's a good idea to define
+it. <i>Texel</i> is short for <i>Texture Pixel</i>, and you can think of it as 
+a single "pixel" of a texture. A texel can be 32 bits (which you might be most
+familiar with, 255 values of red + green + blue + alpha), 16 bits, 8 bits, or
+even smaller! 
+</p>
+
+<p>
+For instance, if each pixel of your image is 32 bits, then each pixel of your 
+texture takes up 4 bytes of TMEM. This means that, using a 32 bit format, you
+can only fit up to 1024 texels in TMEM. How those 1024 texels are organized, is
+up to you, as you can do 32x32, 16x48, etc...
 </p>
 <!--END-->
 </body>
