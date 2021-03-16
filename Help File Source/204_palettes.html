@@ -43,6 +43,14 @@ fail, and you must dither the image using an external program to reduce
 its colors.
 </p>
 
+<p>
+The color preview matrix on the bottom left of the program will display
+<span class="inlinecode">????</span> if no palettes are present. If a palette
+is present (either an automatically generated one or an imported one), 
+then placing the mouse over a texel will display the palette value instead 
+(with the color it represents in parenthesis).
+</p>
+
 
 <h3>Importing/Exporting Palettes</h3>
 
@@ -82,7 +90,7 @@ base palette, the compilation will fail! <b>You must also ensure that the alpha
 values match!</b>
 
 
-<h3>NPL format</h3>
+<h3>NPL Format</h3>
 
 <p>
 The NPL format is very basic and can be modified with a text editor. All files
