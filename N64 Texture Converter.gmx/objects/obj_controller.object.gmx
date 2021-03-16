@@ -882,6 +882,7 @@ with obj
     {
         arrayx = min(max(0, floor(mx+(view_xview[1]-SPRITEXSTART))), obj_sprite.sprite_width-1)
         arrayy = min(max(0, floor(my+(view_yview[1]-SPRITEYSTART))), obj_sprite.sprite_height-1)
+        
         mousecolor = obj_sprite.sprite_color[arrayx, arrayy]
         mousealpha = obj_sprite.sprite_alpha[arrayx, arrayy]
         if (global.usealpha &amp;&amp; global.alphatype == "SingleColor" &amp;&amp; mouse_check_button(mb_left))
@@ -1280,7 +1281,7 @@ i +=(inc*2)-8
 
 
 draw_set_halign(fa_middle)
-draw_text(152/2,53+i,"Image Type")
+draw_text(152/2,53+i,"Color Format")
 i +=inc*14
 draw_text(152/2,53+i, "Export Format")
 draw_set_halign(fa_left)
@@ -2382,13 +2383,13 @@ draw_set_font(fnt_default)
             <kind>1</kind>
             <string>if global.exporttype == "16B-YUV"
 {
-    var i, inc, text, YUV, U, Y1, V, Y2;
+    var i, inc, text, YUV=0, U=0, Y1=0, V=0, Y2=0;
     
     draw_set_font(fnt_button)
     draw_set_color(c_black)
     inc = 16;
     i = 480;
-    if (instance_number(obj_sprite) &gt; 0)
+    if (instance_number(obj_sprite) &gt; 0 &amp;&amp; arrayx &lt; obj_sprite.sprite_width &amp;&amp; arrayy &lt; obj_sprite.sprite_height)
     {
         YUV = calc_yuv_index(arrayx, arrayy);
         U = (YUV&gt;&gt;24)&amp;$FF
