@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>YUV Format</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/background.png">
+<!--START-->
+
+
+<h1>YUV Format</h1>
+
+<p>
+YUV is a special type of color representation, typically used in compressed
+formats like JPEG's and MPEG's. Colors in YUV space are composed of Luminance
+(Brightness, represented by Y) and Chrominance (Represented by a combination of
+U (Blueness) and V (Redness)). 
+</p>
+
+<center>
+<img src="images/YUV.png" width="256" height="256">
+<p>
+<i>An example of the UV color plane, with Y = 128</i>
+</p>
+</center>
+
+<p>
+Each YUV texel is 16 bits, but similarly to 4 bit color formats, each texel 
+actually represents two texels. This means that you can have up to 2048 texels
+in your original image (like other 16-Bit formats). YUV does not support alpha.
+</p>
+
+<p>
+Nintendo did not want to support YUV, as its use is incredibly niche. It is, 
+therefore, not really recommended to be used and should be swapped over to
+16-Bit RGBA instead.
+</p>
+
+<!--END-->
+</body>
+</html>

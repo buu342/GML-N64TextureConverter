@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Intensity With Alpha Format</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/background.png">
+<!--START-->
+
+
+<h1>Intensity With Alpha Format</h1>
+
+<p>
+This format is incredibly similar to <i>Intensity</i> format, except this one
+trades color depth for the ability to use alpha.
+</p>
+
+<p>
+There are three different variations on the IA format:
+</p>
+
+<h3>16-Bit Intensity + Alpha</h3>
+
+<p>
+In this format, each texel takes up two bytes. The first 8 bits represent the 
+color intensity of the texel, ranging from <span class="inlinecode">0x00</span>
+(black) to <span class="inlinecode">0xFF</span> (white). The last 8 bits are
+for alpha, also ranging from <span class="inlinecode">0x00</span> (transparent)
+to <span class="inlinecode">0xFF</span> (opaque). Due to both intensity and 
+transparency having 256 different shades, this format only allows for 2048 
+texels.
+</p>
+
+<h3>8-Bit Intensity + Alpha</h3>
+
+<p>
+In 8-Bit mode, each texel takes up a byte, with the first 4 bits being the 
+color intensity and the last 4 bits being the alpha. This allows for 16 shades
+of intensity and 16 shades of alpha, giving you 4096 texels to work with.
+</p>
+
+<h3>4-Bit Intensity + Alpha</h3>
+
+<p>
+Much like 4-Bit CI and 4-Bit I, this mode fits in 2 texels into one. In this
+case, each texel is 4 bits, with the first 3 bits being the intensity, and 1
+bit being the alpha (essentially only allowing for alpha to be on or off).
+This format allows for 8192 texels in total.
+</p>
+
+<!--END-->
+</body>
+</html>

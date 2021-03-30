@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TMEM</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body background="images/background.png">
+<!--START-->
+
+
+<h1>TMEM</h1>
+
+<p>
+As mentioned in the previous section, the RDP contains a single cache called
+TMEM, which is shorthand for Texture Memory. This cache is 4 kilobytes in size
+(4096 bytes), and any texture which the RDP wants to use <b>must be loaded into
+TMEM first</b>. There's <b>no way to circumvent this 4 kilobyte limitation</b>,
+so it is your duty to ensure that your texture can be, in some way, twisted to
+fit into this 4kb limit.
+</p>
+
+<p>
+This can be done by choosing the correct image format, by breaking your 
+texture down into smaller bits, or by designing your texture in a way that it
+can be easily broken down manually by your programmer (AKA tiles). There are 
+some texture effects that can be used by you to make your texture look larger 
+than it actually is, which will be covered in the <a href="104_loading.html">
+Loading Textures</a> page.
+</p>
+
+<p>
+When rendering 3D polygons, the Nintendo 64 only supports 1 texture per 
+triangle, so if you wish to render a large texture (larger than 4kb), you must
+divide your model into multiple smaller faces. For example, the paintings in
+Super Mario 64 are 64x64 pixels in size. This is too large to fit into TMEM 
+(You'll understand why in the <a href="103_formats.html">Image Formats</a> 
+page), therefore in order to render it, the painting model needs to split up 
+into chunks:
+</p>
+
+<center>
+<img src="images/texturechunk.png">
+</center>
+
+<h3>Texels</h3>
+
+<p>
+You will probably see this word being used a bit, so it's a good idea to define
+it. <i>Texel</i> is short for <i>Texture Pixel</i>, and you can think of it as 
+a single "pixel" of a texture. A texel can be 32 bits (which you might be most
+familiar with, 255 values of red + green + blue + alpha), 16 bits, 8 bits, or
+even smaller! 
+</p>
+
+<p>
+For instance, if each pixel of your image is 32 bits, then each pixel of your 
+texture takes up 4 bytes of TMEM. This means that, using a 32 bit format, you
+can only fit up to 1024 texels in TMEM. How those 1024 texels are organized, is
+up to you, as you can do 32x32, 16x48, etc...
+</p>
+<!--END-->
+</body>
+</html>
