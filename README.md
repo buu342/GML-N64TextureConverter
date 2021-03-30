@@ -7,6 +7,9 @@ The N64 Texture Converter is a GUI based tool that allows you to import a myriad
 Comes with a manual that teaches both how N64 compatible textures work, and how to use the tool itself.<br/>
 Created in GameMaker: Studio 1.4.<br/><br/>
 
+You can access the HTML documentation via the following URL:<br/>
+https://buu342.github.io/GML-N64TextureConverter/<br/><br/>
+
 ### System Requirements
 * Windows XP or later (Can be run on Linux through Wine)
 * DirectX 9 compatible graphics card with at least 32MB of video memory
