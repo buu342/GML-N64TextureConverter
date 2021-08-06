@@ -194,6 +194,7 @@ if (global.exportfile != "B")
 for (i=0; i<ds_grid_height(block); i+=1)
 {
     var finalname = ds_grid_get(block, 0, i);
+    var simplename = finalname;
     if (global.exportfile != "B")
     {
         switch(byte_size)
@@ -215,7 +216,7 @@ for (i=0; i<ds_grid_height(block); i+=1)
         script_execute(func_write, file, "\n");
         if (global.usedummy)
         {
-            script_execute(func_write, file, "static Gfx "+ds_grid_get(block, 0, i)+"_C_dummy_aligner1[] = { gsSPEndDisplayList() };");
+            script_execute(func_write, file, "static Gfx "+simplename+"_C_dummy_aligner1[] = { gsSPEndDisplayList() };");
             script_execute(func_write, file, "\n");
         }
         script_execute(func_write, file, finalname);
