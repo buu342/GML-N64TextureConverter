@@ -220,20 +220,22 @@ with (input_b)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var mx, my;
+            <string>var mx, my, wxscale, wyscale;
 mx = window_view_mouse_get_x(0)
 my = window_view_mouse_get_y(0)
+wxscale = window_get_width()/800
+wyscale = window_get_height()/600
 
-if mx &gt;= x+width-29+4 &amp;&amp; mx &lt;= x+width-4 &amp;&amp; my &gt;= y+4 &amp;&amp; my &lt;= y+29-4 &amp;&amp; mouse_check_button_released(mb_left) // Close button
+if mx &gt;= x+(width-29+4)*wxscale &amp;&amp; mx &lt;= (x+width-4)*wxscale &amp;&amp; my &gt;= (y+4)*wyscale &amp;&amp; my &lt;= y+(29-4)*wyscale &amp;&amp; mouse_check_button_released(mb_left) // Close button
 {
     instance_destroy()
 }
-else if ((mx &gt;= x+10 &amp;&amp; my &gt;= y+37 &amp;&amp; mx &lt;= x+10+175 &amp;&amp; my &lt;= y+37+187) || changing == 1) // Changing Hue/Sat
+else if ((mx &gt;= x+10*wxscale &amp;&amp; my &gt;= y+37*wyscale &amp;&amp; mx &lt;= x+(10+175)*wxscale &amp;&amp; my &lt;= y+(37+187)*wyscale) || changing == 1) // Changing Hue/Sat
 {
     if (mouse_check_button(mb_left))
     {
-        global.alphahue = round(max(0,min(255,((mx-(x+10))/175)*255)))
-        global.alphasat = round(max(0,min(255, 255-((my-(y+37))/187)*255)))
+        global.alphahue = round(max(0,min(255,((mx-(x+10*wxscale))/175)*255)))
+        global.alphasat = round(max(0,min(255, 255-((my-(y+37*wyscale))/187)*255)))
         event_perform(ev_other, ev_user0)
         
         colr = round(color_get_red(background_color))
@@ -248,11 +250,11 @@ else if ((mx &gt;= x+10 &amp;&amp; my &gt;= y+37 &amp;&amp; mx &lt;= x+10+175 &a
         changing = 1
     }
 }
-else if ((mx &gt;= x+202 &amp;&amp; my &gt;= y+37 &amp;&amp; mx &lt;= x+212 &amp;&amp; my &lt;= y+37+187) || changing == 2) // Changing value
+else if ((mx &gt;= x+202*wxscale &amp;&amp; my &gt;= y+37*wyscale &amp;&amp; mx &lt;= x+212*wxscale &amp;&amp; my &lt;= y+(37+187)*wyscale) || changing == 2) // Changing value
 {
     if (mouse_check_button(mb_left))
     {
-        global.alphaval = round(max(0,min(255,255-((my-(y+37))/187)*255)))
+        global.alphaval = round(max(0,min(255,255-((my-(y+37*wyscale))/187)*255)))
         event_perform(ev_other, ev_user0)
         
         colr = round(color_get_red(background_color))
@@ -275,10 +277,10 @@ else if mouse_check_button_pressed(mb_left)
 
 
 // Force mouse positions
-if (mouse_check_button(mb_left) &amp;&amp; changing == 1 &amp;&amp; !(mx &gt;= x+10 &amp;&amp; my &gt;= y+37 &amp;&amp; mx &lt;= x+10+175 &amp;&amp; my &lt;= y+37+187))
-    window_mouse_set(max(x+10, min(mouse_x, x+10+175)), max(y+37, min(mouse_y, y+37+187)))
-else if (mouse_check_button(mb_left) &amp;&amp; changing == 2 &amp;&amp; !(mx &gt;= x+202 &amp;&amp; my &gt;= y+37 &amp;&amp; mx &lt;= x+212 &amp;&amp; my &lt;= y+37+187))
-    window_mouse_set(max(x+202, min(mouse_x, x+212)), max(y+37, min(mouse_y, y+37+187)))
+if (mouse_check_button(mb_left) &amp;&amp; changing == 1 &amp;&amp; !(mx &gt;= x+10*wxscale &amp;&amp; my &gt;= y+37*wyscale &amp;&amp; mx &lt;= x+(10+175)*wxscale &amp;&amp; my &lt;= y+(37+187)*wyscale))
+    window_mouse_set(max(x+10*wxscale, min(mouse_x, x+(10+175)*wxscale))*wxscale, max(y+37*wyscale, min(mouse_y, y+(37+187)*wyscale)))
+else if (mouse_check_button(mb_left) &amp;&amp; changing == 2 &amp;&amp; !(mx &gt;= x+202*wxscale &amp;&amp; my &gt;= y+37*wyscale &amp;&amp; mx &lt;= x+212*wxscale &amp;&amp; my &lt;= y+(37+187)*wyscale))
+    window_mouse_set(max(x+202*wxscale, min(mouse_x, x+212*wxscale)), max(y+37*wyscale, min(mouse_y, y+(37+187)*wyscale)))
 else if (!mouse_check_button(mb_left))
     changing = 0
 </string>

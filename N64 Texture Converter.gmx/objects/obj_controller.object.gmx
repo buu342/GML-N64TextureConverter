@@ -875,13 +875,13 @@ with obj
             <kind>1</kind>
             <string>if (instance_number(obj_popup) == 0 &amp;&amp; instance_exists(obj_sprite))
 {
-    mx = (window_view_mouse_get_x(0)-VIEWXSTART)/global.zoom
-    my = (window_view_mouse_get_y(0)-VIEWYSTART)/global.zoom
+    mx = window_view_mouse_get_x(1)
+    my = window_view_mouse_get_y(1)
     
-    if (mx &gt;= 0 &amp;&amp; my &gt;= 0 &amp;&amp; mx &lt; view_wview[1] &amp;&amp; my &lt; view_hview[1])
+    if (mx &gt;= SPRITEXSTART &amp;&amp; my &gt;= SPRITEYSTART &amp;&amp; mx &lt; (SPRITEXSTART+obj_sprite.sprite_width-1) &amp;&amp; my &lt; (SPRITEYSTART+obj_sprite.sprite_height-1))
     {
-        arrayx = min(max(0, floor(mx+(view_xview[1]-SPRITEXSTART))), obj_sprite.sprite_width-1)
-        arrayy = min(max(0, floor(my+(view_yview[1]-SPRITEYSTART))), obj_sprite.sprite_height-1)
+        arrayx = min(max(0, floor(mx-SPRITEXSTART)), obj_sprite.sprite_width-1)
+        arrayy = min(max(0, floor(my-SPRITEYSTART)), obj_sprite.sprite_height-1)
         
         mousecolor = obj_sprite.sprite_color[arrayx, arrayy]
         mousealpha = obj_sprite.sprite_alpha[arrayx, arrayy]
